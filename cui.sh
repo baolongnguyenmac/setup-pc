@@ -9,3 +9,9 @@ bash ibus.sh
 
 # setup zsh
 bash setup_zsh.sh
+
+# prevent laptop from sleeping
+sudo apt install caffeine
+
+# install latex
+sudo apt install texlive-full
