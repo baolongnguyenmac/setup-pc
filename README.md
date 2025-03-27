@@ -82,3 +82,8 @@ I use 2 venv managers: `uv` and `conda`. Using `uv` is because of its speed. Usi
     source ~/miniconda3/bin/activate
     ```
 
+## Install Microsoft Edge for editing PDF
+
+Download the installer from [Microsoft](https://www.microsoft.com/en-us/edge/download?form=MA13FJ)
+
+Then `sudo dpkg -i <package>.deb`
