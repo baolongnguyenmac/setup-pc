@@ -57,6 +57,8 @@ If you have an iCloud email, go to `https://account.apple.com/account/manage` an
 
 You may also want to fwd all emails from other accounts to this account so you don't have to check email for all accounts
 
+Thunderbird archives emails by year. But in case that you choose to compact the `Archives` folder, all the folders will be gone (they're still there online, but gone in local). In such case, if you want to get these folder back, e.g., folder 2018, you have to move (on cloud) an email from 2018 to `Inbox`. Then, you archive this email in ThunderBird. Keep doing so for all the years.
+
 ## Setup virtual environment
 
 I use 2 venv managers: `uv` and `conda`. Using `uv` is because of its speed. Using `conda` dues to its global ability
