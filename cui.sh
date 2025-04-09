@@ -1,17 +1,20 @@
-# install uv
-curl -LsSf https://astral.sh/uv/install.sh | sh
+# install curl
+sudo apt install curl
 
 # install conda
 bash conda.sh
 
-# install ibus
-bash ibus.sh
-
 # setup zsh
 bash setup_zsh.sh
+
+# install uv and setup venv
+bash setup_uv.sh
+
+# install ibus
+bash ibus.sh
 
 # prevent laptop from sleeping
 sudo apt install caffeine
 
-# install latex
-sudo apt install texlive-full
+# # install latex
+# sudo apt install texlive-full

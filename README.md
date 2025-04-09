@@ -41,11 +41,15 @@ Refer to `gui.sh` for details
 
 ## Download DropBox
 
-Download DropBox and setup the account (this is pre-required before we move to the next step)
+Download [Dropbox](https://www.dropbox.com/install-linux) and setup the account (this is pre-required before we move to the next step)
 
 ## Setup Alias
 
 Source the file `~/Dropbox/01backup/bin/bash_alias_private`
+
+```bash
+echo "source ~/Dropbox/01backup/bin/bash_alias_private" >> ~/.zshrc
+```
 
 ## Setup Latex
 
