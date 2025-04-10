@@ -37,7 +37,7 @@ This repo is used to setup a new Ubuntu/PopOS laptop
     - [VSCode](https://code.visualstudio.com/download) --> Login to GitHub
     - [Dropbox](https://www.dropbox.com/install-linux) --> Login to Dropbox account
     - [Tray icons plugin](https://extensions.gnome.org/extension/2890/tray-icons-reloaded/): This helps display Dropbox icon so we can interact with the app
-    - [Microsoft Edge](https://www.microsoft.com/vi-vn/edge/?form=MA13FJ) --> Login to Microsoft
+    - [Microsoft Edge](https://www.microsoft.com/vi-vn/edge/?form=MA13FJ) --> Login to Microsoft and change Search engine to Google
 
 ## Setup commandline applications
 
