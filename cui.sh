@@ -1,6 +1,6 @@
 echo "============= Install curl ============="
 sudo apt install curl
-echo "========================================"
+# echo "========================================"
 
 echo "============= Setup Conda ============="
 # install
@@ -32,8 +32,8 @@ sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/
 # install uv and setup venv
 echo "============= Setup UV ============="
 curl -LsSf https://astral.sh/uv/install.sh | sh
-uv venv ~/.nblong --python 3.11
-echo "source ~/.nblong/bin/activate" >> ~/.zshrc
+# uv venv ~/.nblong --python 3.11
+# echo "source ~/.nblong/bin/activate" >> ~/.zshrc
 # echo "========================================"
 
 echo "============= Install iBus ============="
