@@ -76,7 +76,7 @@ This repo is used to setup a new Ubuntu/PopOS laptop
 - Setup `.ssh`
 
     ```bash
-    ln -s ~/Dropbox/01backup/Self/bin/ssh ~/.ssh
+    ln -s ~/Dropbox/Self/bin/ssh ~/.ssh
     chmod 600 ~/.ssh/id_rsa
     ```
 
