@@ -56,7 +56,7 @@ This repo is used to setup a new Ubuntu/PopOS laptop
 
     ```
 
-- Install `tlp` for improve battery lifetime
+- Install `tlp` for improve battery lifetime. Verify by `tlp-stat -s`
 
 ## Setup `venv`, `.ssh` and alias
 
