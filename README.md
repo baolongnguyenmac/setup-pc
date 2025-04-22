@@ -58,6 +58,8 @@ This repo is used to setup a new Ubuntu/PopOS laptop
 
 - Install `tlp` for improve battery lifetime. Verify by `tlp-stat -s`
 
+- Install `pandoc` for converting from `*.md` to `*.pdf`
+
 ## Setup `venv`, `.ssh` and alias
 
 - Setup `venv`: I use 2 venv managers: `uv` and `conda`. Using `uv` is because of its speed. Using `conda` dues to its global ability

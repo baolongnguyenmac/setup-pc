@@ -49,5 +49,10 @@ sudo apt install tree
 echo "============= Install tlp ============="
 sudo apt install tlp
 
-# # install latex
-# sudo apt install texlive-full
+# check basic info of laptop
+echo "============= Install neofetch ============="
+sudo apt install neofetch
+
+# install latex
+echo "============= Install Latex ============="
+sudo apt install texlive-full
