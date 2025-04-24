@@ -56,3 +56,19 @@ sudo apt install neofetch
 # install latex
 echo "============= Install Latex ============="
 sudo apt install texlive-full
+
+# install snap to install other package provided by amazon :D
+echo "============= Install Snap ============="
+sudo apt install snapd
+sudo snap install snapd # get the latest one
+
+# chech if snap was installed successfully
+sudo snap install hello-world
+hello-world
+
+# install typst using snap to be pdf engine of pandoc
+echo "============= Install Typst ============="
+sudo snap install typst
+
+# at this time, you should restart the comp.
+

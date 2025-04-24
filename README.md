@@ -58,6 +58,7 @@ This repo is used to setup a new Ubuntu/PopOS laptop
 
 - Install `tlp` for improve battery lifetime. Verify by `tlp-stat -s`
 
+- Install `snap`, then use `snap` to install `typst`, a compiler for pandoc to produce pdf from markdown file
 - Install `pandoc` for converting from `*.md` to `*.pdf`
 
 ## Setup `venv`, `.ssh` and alias
