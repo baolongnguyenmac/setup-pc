@@ -15,6 +15,7 @@ conda init --all
 echo "============= Setup Zsh ============="
 # install zsh and set default shell
 sudo apt install zsh
+# chsh -s $(which zsh)
 echo "zsh" >> ~/.bashrc
 
 # install oh-my-zsh
@@ -23,8 +24,6 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 # plugins for oh-my-zsh
 sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
-# after cloning these plugins, you have to add them into ~/.zshrc (in the plugins): `zsh-autosuggestions`, `zsh-syntax-highlighting`
 
 # install uv and setup venv
 echo "============= Setup UV ============="
@@ -53,22 +52,17 @@ sudo apt install tlp
 echo "============= Install neofetch ============="
 sudo apt install neofetch
 
-# install latex
-echo "============= Install Latex ============="
-sudo apt install texlive-full
-
 # install snap to install other package provided by amazon :D
 echo "============= Install Snap ============="
 sudo apt install snapd
 sudo snap install snapd # get the latest one
 
-# chech if snap was installed successfully
-sudo snap install hello-world
-hello-world
-
 # install typst using snap to be pdf engine of pandoc
 echo "============= Install Typst ============="
 sudo snap install typst
 
-# at this time, you should restart the comp.
+# install latex: the last one (since we have to download 6GB)
+echo "============= Install Latex ============="
+sudo apt install texlive-full
 
+# at this time, you should restart the comp.

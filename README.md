@@ -2,9 +2,10 @@
 
 This repo is used to setup a new Ubuntu/PopOS laptop
 
-## Setup source.list
+## Before doing anything
 
-- You should have already set this up when installing Debian (just choose the server that's near you)
+- Username: nblong
+- You should set `sources.list` up when installing Debian (just choose the server that's near you)
 
 ## Grant permission for user
 
@@ -23,7 +24,7 @@ This repo is used to setup a new Ubuntu/PopOS laptop
 
     - `Ctrl+O` to save and `Ctrl+X` to exit. Now you can `sudo` thing out
 
-## Google account
+## Online account in Setting
 
 - Login to all Google accounts
 - Sync calendar and contacts
@@ -33,10 +34,12 @@ This repo is used to setup a new Ubuntu/PopOS laptop
 
 - Download `*.deb` file and install by `sudo dpkg -i <package>.deb`
 
-    - [Chrome](https://www.google.com/intl/vi_vn/chrome/) --> Login to all Google account
+    - [Chrome](https://www.google.com/intl/vi_vn/chrome/) --> Login to all Google accounts
     - [VSCode](https://code.visualstudio.com/download) --> Login to GitHub
+    - [Tray icons plugin](https://extensions.gnome.org/extension/2890/tray-icons-reloaded/): This helps display app indicator (the small icon in taskbar) so we can interact with the app
     - [Dropbox](https://www.dropbox.com/install-linux) --> Login to Dropbox account
-    - [Tray icons plugin](https://extensions.gnome.org/extension/2890/tray-icons-reloaded/): This helps display Dropbox icon so we can interact with the app
+        - Note that you should only sync `~/Dropbox/Self/bin` for setup
+        - After that, you can choose to sync other folders
     - [Microsoft Edge](https://www.microsoft.com/vi-vn/edge/?form=MA13FJ) --> Login to Microsoft and change Search engine to Google
 
 ## Setup commandline applications
@@ -45,51 +48,24 @@ This repo is used to setup a new Ubuntu/PopOS laptop
 
 - After installing `iBus` for Unikey (Vietnamese), the system has to be restarted. Then, add the Vietnamese keyboard from setting
 
-- After install `Oh-my-zsh` and its plugins, you have to add their names into the plugins
-
-    ```bash
-    plugins=(
-            git
-            zsh-syntax-highlighting
-            zsh-autosuggestions
-    )
-
-    ```
+- After install `Oh-my-zsh` and its plugins, you don't have to add these plugins into `.zshrc` since you will link `.zshrc` from Dropbox to home directory
 
 - Install `tlp` for improve battery lifetime. Verify by `tlp-stat -s`
 
 - Install `snap`, then use `snap` to install `typst`, a compiler for pandoc to produce pdf from markdown file
+- After installing `snap`, verify by:
+
+    ```bash
+    # chech if snap was installed successfully
+    sudo snap install hello-world
+    hello-world
+    ```
+
 - Install `pandoc` for converting from `*.md` to `*.pdf`
 
-## Setup `venv`, `.ssh` and alias
+## Setup Shell and SSH
 
-- Setup `venv`: I use 2 venv managers: `uv` and `conda`. Using `uv` is because of its speed. Using `conda` dues to its global ability
-
-    - Create a `venv` and source it every time a terminal starts
-
-        ```bash
-        uv venv ~/.nblong --python 3.11
-        echo "source ~/.nblong/bin/activate" >> ~/.zshrc
-        ```
-
-    - Activate `base` environment of `conda`:
-
-        ```bash
-        source ~/miniconda3/bin/activate
-        ```
-
-- Setup `.ssh`
-
-    ```bash
-    ln -s ~/Dropbox/Self/bin/ssh ~/.ssh
-    chmod 600 ~/.ssh/id_rsa
-    ```
-
-- Source the file `bash_alias_private`
-
-    ```bash
-    echo "source ~/Dropbox/01backup/Self/bin/bash_alias_private" >> ~/.zshrc
-    ```
+- Refer to `~/Dropbox/Self/bin/note.md` for detail
 
 ## Setup email (Thunderbird)
 
