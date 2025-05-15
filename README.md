@@ -63,6 +63,10 @@ This repo is used to setup a new Ubuntu/PopOS laptop
 
 - Install `pandoc` for converting from `*.md` to `*.pdf`
 
+- Install `princexml` for converting from `*.md` to `*.pdf`:
+    - Download a deb file from: `https://www.princexml.com/download/`
+    - Then install it
+
 ## Setup Shell and SSH
 
 - Refer to `~/Dropbox/Self/bin/note.md` for detail
