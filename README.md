@@ -36,7 +36,11 @@ This repo is used to setup a new Ubuntu/PopOS laptop
 
     - [Chrome](https://www.google.com/intl/vi_vn/chrome/) --> Login to all Google accounts
     - [VSCode](https://code.visualstudio.com/download) --> Login to GitHub
-    - [Tray icons plugin](https://extensions.gnome.org/extension/2890/tray-icons-reloaded/): This helps display app indicator (the small icon in taskbar) so we can interact with the app
+    - [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/): This helps display app indicator (the small icon in taskbar) so we can interact with the app. But I notice that we have to re-enable it every time we turn on the lap. I decide to add these commands to `~/.zshrc`
+        ```bash
+        gnome-extensions disable appindicatorsupport@rgcjonas.gmail.com
+        gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
+        ```
     - [Dropbox](https://www.dropbox.com/install-linux) --> Login to Dropbox account
         - Note that you should only sync `~/Dropbox/Self/bin` for setup
         - After that, you can choose to sync other folders
