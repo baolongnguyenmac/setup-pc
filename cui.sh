@@ -1,5 +1,5 @@
 # install all the stuff below at once
-# never test them
+# haven't tested them
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

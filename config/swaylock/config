@@ -1,0 +1,9 @@
+ignore-empty-password
+clock
+timestr=%H.%M.%S
+datestr=%A, %m %Y
+image="/home/nblong/Dropbox/Self/bin/setup-pc/bg/wall.jpeg"
+inside-color=#00000000
+ring-color=#00000000
+indicator-thickness=4px
+line-uses-ring

@@ -54,9 +54,11 @@ This repo is used to setup a new Ubuntu/PopOS laptop
 
 - After install `Oh-my-zsh` and its plugins, you don't have to add these plugins into `.zshrc` since you will link `.zshrc` from Dropbox to home directory
 
+- Install `ninja-build` to build stuff for `sway` (e.g., bar, launcher,...)
+
 - Install `tlp` for improve battery lifetime. Verify by `tlp-stat -s`
 
-- Install `snap`, then use `snap` to install `typst`, a compiler for pandoc to produce pdf from markdown file
+<!-- - Install `snap`, then use `snap` to install `typst`, a compiler for pandoc to produce pdf from markdown file
 - After installing `snap`, verify by:
 
     ```bash
@@ -69,7 +71,11 @@ This repo is used to setup a new Ubuntu/PopOS laptop
 
 - Install `princexml` for converting from `*.md` to `*.pdf`:
     - Download a deb file from: `https://www.princexml.com/download/`
-    - Then install it
+    - Then install it -->
+
+### Sway
+
+- Refer to `~/Dropbox/Self/bin/note.md` for detail
 
 ## Setup Shell and SSH
 

@@ -1,0 +1,78 @@
+/* Tổng thể cửa sổ */
+#window {
+    background-color: rgba(30, 30, 30, 0.6); /* Nền xám đen trong suốt */
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);  /* Tạo hiệu ứng mờ phía sau */
+    padding: 10px;
+    font-family: "Fira Code", "JetBrains Mono", sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+/* Thanh tìm kiếm */
+#input {
+    background-color: rgba(20, 20, 20, 0.4);
+    padding: 6px 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    border: none;
+}
+
+/* Hộp nội dung chính */
+#outer-box {
+    padding: 10px;
+}
+
+/* Scrollbox chứa entry */
+#scroll {
+    background: transparent;
+}
+
+/* Entry item */
+#entry {
+    padding: 8px 12px;
+    margin-bottom: 4px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* Khi được chọn */
+#entry:selected {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #00ffff;
+}
+
+/* Khi chưa được chọn */
+#entry:unselected {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #dddddd;
+}
+
+/* Icon trong các entry */
+#img {
+    margin-right: 10px;
+    min-width: 24px;
+    min-height: 24px;
+    opacity: 0.9;
+}
+
+/* Text entry */
+#text {
+    color: inherit;
+}
+
+/* Bo góc cho các khối trong */
+#inner-box {
+    background: transparent;
+}
+
+/* Expanders nếu có */
+#expander-box {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 6px;
+}
