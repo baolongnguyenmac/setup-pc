@@ -7,7 +7,7 @@
     "modules-right": ["pulseaudio", "network", "battery", "custom/separator", "cpu", "memory", "tray"],
 
     "sway/window": {
-        "max-length": 30
+        "max-length": 40
     },
 
     "sway/workspaces": {
@@ -20,20 +20,7 @@
     },
 
     "pulseaudio": {
-        "format": "VOL {volume}% |",
-        "format-bluetooth": "VOL {volume}%",
-        "format-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", ""]
-        },
-        "scroll-step": 1,
-        "on-click-right": "pavucontrol"
+        "format": "VOL {volume}% |"
     },
 
     "battery": {
@@ -61,7 +48,7 @@
 
     "memory": {
         "interval": 30,
-        "format": "MEM {used:0.1f}G/{total:0.1f}G |"
+        "format": "RAM {used:0.1f}G/{total:0.1f}G |"
     },
 
     "tray": {

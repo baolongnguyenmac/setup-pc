@@ -1,0 +1,57 @@
+window:
+  padding:
+    x: 12
+    y: 10
+  decorations: none         # Không viền
+  opacity: 0.85             # Độ trong suốt
+  dynamic_title: true
+
+font:
+  normal:
+    family: "Cousine"
+    style: Regular
+  size: 12.5
+  offset:
+    x: 0
+    y: 2
+  builtin_box_drawing: true
+
+# Màu scheme: TokyoNight (Dark)
+colors:
+  primary:
+    background: '0x1a1b26'
+    foreground: '0xc0caf5'
+
+  normal:
+    black:   '0x15161e'
+    red:     '0xf7768e'
+    green:   '0x9ece6a'
+    yellow:  '0xe0af68'
+    blue:    '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan:    '0x7dcfff'
+    white:   '0xa9b1d6'
+
+  bright:
+    black:   '0x414868'
+    red:     '0xf7768e'
+    green:   '0x9ece6a'
+    yellow:  '0xe0af68'
+    blue:    '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan:    '0x7dcfff'
+    white:   '0xc0caf5'
+
+cursor:
+  style:
+    shape: Block
+    blinking: Off
+  # blink_interval: 500
+  # blink_timeout: 0
+
+# Bật scroll bằng chuột
+mouse:
+  hide_when_typing: true
+
+selection:
+  save_to_clipboard: true

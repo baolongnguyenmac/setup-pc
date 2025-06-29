@@ -1,9 +1,46 @@
-ignore-empty-password
-clock
-timestr=%H.%M.%S
-datestr=%A, %m %Y
-image="/home/nblong/Dropbox/Self/bin/setup-pc/bg/wall.jpeg"
-inside-color=#00000000
-ring-color=#00000000
-indicator-thickness=4px
-line-uses-ring
+# Hình nền
+scaling=fill
+color=000000cc  # nền mờ đen nếu hình ảnh không phủ kín
+image="/home/nblong/Dropbox/Self/bin/setup-pc/bg/wall2.png"
+
+# Hiển thị thông tin khi nhập mật khẩu
+show-failed-attempts
+indicator-idle-visible
+indicator-radius=100
+indicator-thickness=10
+
+# Hiển thị bố cục bàn phím nếu có nhiều layout
+show-keyboard-layout
+
+# Hiển thị trạng thái Caps Lock
+indicator-caps-lock
+
+# Màu sắc (tuỳ chỉnh nhẹ nhàng)
+inside-color=00000088
+inside-clear-color=00ff0088
+inside-ver-color=0088ff88
+inside-wrong-color=ff000088
+
+ring-color=ccccccaa
+ring-clear-color=00ff00aa
+ring-ver-color=0088ffaa
+ring-wrong-color=ff0000aa
+ring-caps-lock-color=ffff00aa
+
+line-color=ffffffaa
+line-ver-color=00ffffaa
+line-wrong-color=ff00ffaa
+line-clear-color=00ff88aa
+line-caps-lock-color=ffff00aa
+
+text-color=ffffffff
+text-clear-color=00ff00ff
+text-ver-color=0088ffff
+text-wrong-color=ff0000ff
+text-caps-lock-color=ffff00ff
+
+key-hl-color=00ffccff
+bs-hl-color=ff3366ff
+
+font=Cousine
+font-size=16

@@ -35,8 +35,16 @@ sudo apt install wofi
 sudo apt install grim slurp
 sudo apt install wl-clipboard # save screenshot to clipboard
 
-# shoot notification by notify-sent "your noti"
+# shoot notification by notify-sent "your notification"
 sudo apt install libnotify-bin
+
+# lib app-indicator
+sudo apt-get install libayatana-indicator3-1
+
+# gdm3 for login? i think that i have accidentally removed it somewhere, which leads to the fact that i can't use display manager (gdm3) at login (it shows a console instead)
+sudo apt install gdm3
+sudo systemctl start gdm3
+sudo dpkg-reconfigure gdm3
 
 # # lock screen -> build from source
 # sudo apt install swaylock-fancy

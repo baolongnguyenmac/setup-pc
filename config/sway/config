@@ -8,11 +8,10 @@
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
-# Home row direction keys, like vim
-set $left h
-set $down j
-set $up k
-set $right l
+# # Home row direction keys, like vim
+# set $left h
+# set $down j
+# set $up k
 # Your preferred terminal emulator
 set $term gnome-terminal
 # Your preferred application launcher
@@ -26,22 +25,43 @@ include /etc/sway/config-vars.d/*
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg "/home/nblong/Dropbox/Self/bin/setup-pc/bg/wall.jpeg" fill
+set $wallpaper /home/nblong/Dropbox/Self/bin/setup-pc/bg/wall2.png
+output * bg $wallpaper fill
 #
 # Example configuration:
 #
-output 'Unknown 0xF99B 0x00000000' resolution 1920x1080 position 1920,0
+# 1680x1050
+output "Unknown 0xF99B 0x00000000" pos 1920 0 res 1920x1080
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
+
+# kill them all before start
+exec_always pkill waybar
+exec_always pkill mako
+exec_always pkill nm-tray
+exec_always pkill gnome-keyring-d
+exec_always pkill dunst # làm nền cho notify_sent
+exec_always pkill blueman-applet
+
+# startup application
+exec_always /usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh
+exec_always blueman-applet
+exec_always waybar
+exec_always dunst &
+exec_always dropbox start
+exec_always ibus start
+exec_always mako
+exec_always "sleep 5 && nm-tray &"
 
 ### Idle configuration
 #
 # Example configuration:
 #
+set $swaylock swaylock --image $wallpaper
 exec swayidle -w \
-        timeout 480 'swaylock -f -c 000000' \
+        timeout 480 "$swaylock" \
         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-        before-sleep 'swaylock -f -c 000000'
+        before-sleep "$swaylock"
 #
 # This will lock your screen after 480 seconds of inactivity, then turn off
 # your displays after another 120 seconds, and turn your screens back on when
@@ -109,26 +129,30 @@ exec swayidle -w \
     #     bindsym Escape mode "default"
     # }
 
-    bindsym $mod+Shift+s exec $locker && systemctl suspend
+    bindsym $mod+Shift+l exec $swaylock
+    bindsym $mod+Shift+s exec systemctl suspend
+    bindsym $mod+Shift+r exec systemctl reboot
+    bindsym $mod+Shift+p exec systemctl poweroff
+    bindsym $mod+Shift+e exec swaymsg exit # end session
 #
 # Moving around:
 #
-    # Move your focus around
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
+    # # Move your focus around
+    # bindsym $mod+$left focus left
+    # bindsym $mod+$down focus down
+    # bindsym $mod+$up focus up
+    # bindsym $mod+$right focus right
     # Or use $mod+[up|down|left|right]
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down
     bindsym $mod+Up focus up
     bindsym $mod+Right focus right
 
-    # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
+    # # Move the focused window with the same, but add Shift
+    # bindsym $mod+Shift+$left move left
+    # bindsym $mod+Shift+$down move down
+    # bindsym $mod+Shift+$up move up
+    # bindsym $mod+Shift+$right move right
     # Ditto, with arrow keys
     bindsym $mod+Shift+Left move left
     bindsym $mod+Shift+Down move down
@@ -202,14 +226,14 @@ exec swayidle -w \
 # Resizing containers:
 #
 mode "resize" {
-    # left will shrink the containers width
-    # right will grow the containers width
-    # up will shrink the containers height
-    # down will grow the containers height
-    bindsym $right resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $left resize grow width 10px
+    # # left will shrink the containers width
+    # # right will grow the containers width
+    # # up will shrink the containers height
+    # # down will grow the containers height
+    # bindsym $right resize shrink width 10px
+    # bindsym $down resize grow height 10px
+    # bindsym $up resize shrink height 10px
+    # bindsym $left resize grow width 10px
 
     # Ditto, with arrow keys
     bindsym Right resize shrink width 10px
@@ -228,7 +252,7 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    swaybar_command waybar
+    # swaybar_command waybar
     # position bottom
 
     # # When the status_command prints a new line to stdout, swaybar updates.
@@ -251,11 +275,6 @@ include /etc/sway/config.d/*
 # mouse button for dragging.
 floating_modifier $mod normal
 # for_window [class="Signal"] floating enable
-
-# startup application
-exec dropbox start
-exec ibus start
-exec mako
 
 # cursor
 seat seat0 xcursor_theme Adwaita 40
