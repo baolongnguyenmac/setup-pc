@@ -4,7 +4,7 @@
     "height": 25,
     "modules-left": ["sway/workspaces", "sway/window"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "network", "battery", "custom/separator", "cpu", "memory", "tray"],
+    "modules-right": ["pulseaudio", "network", "battery", "memory", "tray"],
 
     "sway/window": {
         "max-length": 40
@@ -54,5 +54,9 @@
     "tray": {
         "icon-size": 20,
         "spacing": 5
+    },
+
+    "temperature": {
+        "format": "{temperatureC}°C |"
     }
 }

@@ -90,7 +90,7 @@
 #pulseaudio,
 #network,
 #battery {
-    border-bottom-color: #752c4e;
+    border-bottom-color: #7c1c49;
 }
 
 #custom-keyboard-layout{
@@ -130,7 +130,7 @@ label:focus {
 
 #cpu,
 #memory {
-    border-bottom-color: #0c6d1a;
+    border-bottom-color: #0f8f22;
 }
 
 #cpu.warning {
